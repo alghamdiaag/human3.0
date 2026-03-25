@@ -1,1 +1,33 @@
+# File: /PROJECT_SETUP_NOTE.txt
 
+IMPORTANT:
+
+If files were created without folders:
+
+You must reorganize them into this structure:
+
+- docs/
+- schemas/
+- .claude/agents/
+- .claude/commands/
+- prompts/
+
+---
+
+## Critical
+
+Claude Code relies on folder paths.
+
+Incorrect structure = system will not work correctly.
+
+---
+
+## After setup
+
+1. Push to GitHub
+2. Import into Claude Code
+3. Run /start
+
+---
+
+System is now ready.
