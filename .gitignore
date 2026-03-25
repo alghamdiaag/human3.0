@@ -1,1 +1,18 @@
+# File: /.gitignore
 
+# Runtime data
+cases/
+
+# Logs
+*.log
+
+# System temp
+.DS_Store
+Thumbs.db
+
+# Node / Python (optional future use)
+node_modules/
+__pycache__/
+
+# Environment
+.env
