@@ -1,0 +1,27 @@
+# File: /prompts/question_style.txt
+
+All questions must follow these rules:
+
+1. Ask one question only
+2. Base question on behavior, not opinion
+3. Require a specific example if possible
+4. Avoid abstract wording
+5. Avoid multi-part questions
+
+---
+
+## Good Example
+
+"What did you actually do the last time you had time to work on this?"
+
+---
+
+## Bad Example
+
+"How do you feel about your productivity and future direction?"
+
+---
+
+## Goal
+
+Extract real signals, not thoughts.
