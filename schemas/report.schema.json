@@ -1,0 +1,216 @@
+# File: /schemas/report.schema.json
+
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Human3.0 Report Data",
+  "type": "object",
+  "required": [
+    "executive_summary",
+    "identity",
+    "life_map",
+    "mind",
+    "body",
+    "spirit",
+    "vocation",
+    "synthesis",
+    "reorientation",
+    "life_system",
+    "thirty_day_plan",
+    "failure_prediction",
+    "accountability"
+  ],
+  "properties": {
+    "executive_summary": {
+      "type": "object",
+      "required": [
+        "dominant_pattern",
+        "primary_constraint",
+        "primary_lever",
+        "supporting_lever",
+        "starting_point"
+      ],
+      "properties": {
+        "dominant_pattern": { "type": "string" },
+        "primary_constraint": { "type": "string" },
+        "primary_lever": {
+          "type": "string",
+          "enum": ["mind", "body", "spirit", "vocation"]
+        },
+        "supporting_lever": {
+          "type": ["string", "null"],
+          "enum": ["mind", "body", "spirit", "vocation", null]
+        },
+        "starting_point": { "type": "string" }
+      }
+    },
+
+    "identity": {
+      "type": "object",
+      "required": [
+        "pattern",
+        "contradictions",
+        "anti_vision",
+        "summary"
+      ],
+      "properties": {
+        "pattern": { "type": "string" },
+        "contradictions": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "anti_vision": { "type": "string" },
+        "summary": { "type": "string" }
+      }
+    },
+
+    "life_map": {
+      "type": "object",
+      "required": ["overview"],
+      "properties": {
+        "overview": { "type": "string" }
+      }
+    },
+
+    "mind": { "$ref": "#/definitions/dimension_section" },
+    "body": { "$ref": "#/definitions/dimension_section" },
+    "spirit": { "$ref": "#/definitions/dimension_section" },
+    "vocation": { "$ref": "#/definitions/dimension_section" },
+
+    "synthesis": {
+      "type": "object",
+      "required": [
+        "primary_lever",
+        "supporting_lever",
+        "explanation"
+      ],
+      "properties": {
+        "primary_lever": {
+          "type": "string",
+          "enum": ["mind", "body", "spirit", "vocation"]
+        },
+        "supporting_lever": {
+          "type": ["string", "null"],
+          "enum": ["mind", "body", "spirit", "vocation", null]
+        },
+        "explanation": { "type": "string" }
+      }
+    },
+
+    "reorientation": {
+      "type": "object",
+      "required": [
+        "anti_vision",
+        "vision",
+        "year_direction",
+        "month_project"
+      ],
+      "properties": {
+        "anti_vision": { "type": "string" },
+        "vision": { "type": "string" },
+        "year_direction": { "type": "string" },
+        "month_project": { "type": "string" }
+      }
+    },
+
+    "life_system": {
+      "type": "object",
+      "required": [
+        "daily_levers",
+        "weekly_structure",
+        "constraints"
+      ],
+      "properties": {
+        "daily_levers": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "weekly_structure": { "type": "string" },
+        "constraints": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+
+    "thirty_day_plan": {
+      "type": "object",
+      "required": [
+        "objective",
+        "steps",
+        "metrics"
+      ],
+      "properties": {
+        "objective": { "type": "string" },
+        "steps": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "metrics": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+
+    "failure_prediction": {
+      "type": "object",
+      "required": [
+        "likely_failures",
+        "early_signals",
+        "recovery_plan"
+      ],
+      "properties": {
+        "likely_failures": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "early_signals": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "recovery_plan": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+
+    "accountability": {
+      "type": "object",
+      "required": [
+        "daily_check",
+        "weekly_check",
+        "rules"
+      ],
+      "properties": {
+        "daily_check": { "type": "string" },
+        "weekly_check": { "type": "string" },
+        "rules": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    }
+  },
+
+  "definitions": {
+    "dimension_section": {
+      "type": "object",
+      "required": [
+        "analysis",
+        "contradictions",
+        "impact",
+        "correction"
+      ],
+      "properties": {
+        "analysis": { "type": "string" },
+        "contradictions": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "impact": { "type": "string" },
+        "correction": { "type": "string" }
+      }
+    }
+  }
+}
