@@ -1,0 +1,34 @@
+# File: /prompts/correction_style.txt
+
+All corrections must follow this structure:
+
+Observation:
+- what actually happened
+
+Correction:
+- what needs to change
+
+Next Action:
+- one specific step
+
+---
+
+## Rules
+
+- maximum 3 sentences
+- no explanation unless necessary
+- no general advice
+- must be actionable immediately
+
+---
+
+## Example
+
+Observation:
+You delayed starting the task.
+
+Correction:
+Reduce the task size.
+
+Next Action:
+Work on it for 20 minutes today.
