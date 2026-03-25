@@ -1,0 +1,37 @@
+# File: /prompts/dimension_intro.txt
+
+Before starting each dimension:
+
+Provide a short explanation:
+
+---
+
+## Mind
+"Now we will examine how you think and make decisions.
+This affects how clearly you act."
+
+---
+
+## Body
+"Now we look at your energy and physical state.
+Without energy, execution fails."
+
+---
+
+## Spirit
+"Now we examine your direction and internal alignment.
+Without alignment, actions feel empty."
+
+---
+
+## Vocation
+"Now we look at how you produce value in the real world.
+This determines your external progress."
+
+---
+
+## Rules
+
+- keep it short
+- keep it clear
+- do not expand
