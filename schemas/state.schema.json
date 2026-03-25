@@ -1,0 +1,116 @@
+# File: /schemas/state.schema.json
+
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Human3.0 Case State",
+  "type": "object",
+  "required": [
+    "case_id",
+    "current_stage",
+    "stages_completed",
+    "gates",
+    "primary_lever",
+    "supporting_lever",
+    "contradictions",
+    "next_action"
+  ],
+  "properties": {
+    "case_id": {
+      "type": "string",
+      "description": "Unique identifier for the user case"
+    },
+    "current_stage": {
+      "type": "string",
+      "enum": [
+        "orientation",
+        "identity",
+        "dissonance",
+        "mind",
+        "body",
+        "spirit",
+        "vocation",
+        "synthesis",
+        "reorientation",
+        "execution",
+        "report"
+      ]
+    },
+    "stages_completed": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "gates": {
+      "type": "object",
+      "required": [
+        "orientation",
+        "identity",
+        "dissonance",
+        "mind",
+        "body",
+        "spirit",
+        "vocation",
+        "synthesis",
+        "reorientation",
+        "execution"
+      ],
+      "properties": {
+        "orientation": { "type": "boolean" },
+        "identity": { "type": "boolean" },
+        "dissonance": { "type": "boolean" },
+        "mind": { "type": "boolean" },
+        "body": { "type": "boolean" },
+        "spirit": { "type": "boolean" },
+        "vocation": { "type": "boolean" },
+        "synthesis": { "type": "boolean" },
+        "reorientation": { "type": "boolean" },
+        "execution": { "type": "boolean" }
+      }
+    },
+    "primary_lever": {
+      "type": ["string", "null"],
+      "enum": ["mind", "body", "spirit", "vocation", null]
+    },
+    "supporting_lever": {
+      "type": ["string", "null"],
+      "enum": ["mind", "body", "spirit", "vocation", null]
+    },
+    "contradictions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "signals": {
+      "type": "object",
+      "properties": {
+        "identity": { "type": "array", "items": { "type": "string" } },
+        "dissonance": { "type": "array", "items": { "type": "string" } },
+        "mind": { "type": "array", "items": { "type": "string" } },
+        "body": { "type": "array", "items": { "type": "string" } },
+        "spirit": { "type": "array", "items": { "type": "string" } },
+        "vocation": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "confidence_levels": {
+      "type": "object",
+      "properties": {
+        "identity": { "type": "number", "minimum": 0, "maximum": 1 },
+        "dissonance": { "type": "number", "minimum": 0, "maximum": 1 },
+        "mind": { "type": "number", "minimum": 0, "maximum": 1 },
+        "body": { "type": "number", "minimum": 0, "maximum": 1 },
+        "spirit": { "type": "number", "minimum": 0, "maximum": 1 },
+        "vocation": { "type": "number", "minimum": 0, "maximum": 1 }
+      }
+    },
+    "next_action": {
+      "type": "string",
+      "description": "Next system step or question"
+    },
+    "last_updated": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}
