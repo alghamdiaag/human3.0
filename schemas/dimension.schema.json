@@ -1,0 +1,76 @@
+# File: /schemas/dimension.schema.json
+
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Human3.0 Dimension Analysis",
+  "type": "object",
+  "required": [
+    "dimension",
+    "signals",
+    "contradictions",
+    "impact",
+    "primary_blocker",
+    "correction",
+    "confidence"
+  ],
+  "properties": {
+    "dimension": {
+      "type": "string",
+      "enum": ["mind", "body", "spirit", "vocation"]
+    },
+    "signals": {
+      "type": "array",
+      "description": "Observed behaviors or patterns",
+      "items": {
+        "type": "string"
+      }
+    },
+    "contradictions": {
+      "type": "array",
+      "description": "Conflicts between stated and actual behavior",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "impact": {
+      "type": "string",
+      "description": "How this dimension is affecting the user’s life"
+    },
+    "primary_blocker": {
+      "type": "string",
+      "description": "Main constraint in this dimension"
+    },
+    "blocker_type": {
+      "type": "string",
+      "description": "Optional classification (clarity / energy / alignment / execution / distribution)"
+    },
+    "cross_dimension_links": {
+      "type": "array",
+      "description": "Connections to other dimensions",
+      "items": {
+        "type": "object",
+        "properties": {
+          "linked_dimension": {
+            "type": "string",
+            "enum": ["mind", "body", "spirit", "vocation"]
+          },
+          "relationship": {
+            "type": "string",
+            "description": "How this dimension affects or is affected by the other"
+          }
+        },
+        "required": ["linked_dimension", "relationship"]
+      }
+    },
+    "correction": {
+      "type": "string",
+      "description": "One clear actionable change"
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    }
+  }
+}
