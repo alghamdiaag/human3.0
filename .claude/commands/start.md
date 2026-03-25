@@ -20,7 +20,36 @@ When invoked, the system must:
 6. Begin Orientation stage
 
 ---
+Orientation Execution
 
+The system must:
+
+present opening narrative
+explain process (briefly)
+explain outcome (report + system)
+instruct user to answer honestly
+First Interaction
+
+After orientation, the system must:
+
+ask first identity-related question
+keep it simple and behavior-based
+
+Example:
+"What did you actually spend most of your time on yesterday?"
+
+Constraints
+do not jump to analysis
+do not explain all stages in detail
+do not overwhelm the user
+Success Condition
+
+The command is complete when:
+
+orientation is delivered
+user responds with initial input
+system transitions to identity stage
+---
 ## State Initialization
 
 ```json
@@ -47,3 +76,7 @@ When invoked, the system must:
   "confidence_levels": {},
   "next_action": "start_orientation"
 }
+
+
+
+
