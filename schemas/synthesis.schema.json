@@ -1,0 +1,51 @@
+# File: /schemas/synthesis.schema.json
+
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Human3.0 Synthesis Output",
+  "type": "object",
+  "required": [
+    "primary_lever",
+    "supporting_lever",
+    "reasoning",
+    "cross_dimension_summary",
+    "priority_explanation"
+  ],
+  "properties": {
+    "primary_lever": {
+      "type": "string",
+      "enum": ["mind", "body", "spirit", "vocation"],
+      "description": "The single most important dimension to address first"
+    },
+    "supporting_lever": {
+      "type": ["string", "null"],
+      "enum": ["mind", "body", "spirit", "vocation", null],
+      "description": "Optional supporting dimension"
+    },
+    "reasoning": {
+      "type": "string",
+      "description": "Explanation for why the primary lever was selected"
+    },
+    "cross_dimension_summary": {
+      "type": "string",
+      "description": "Explanation of how dimensions influence each other in this case"
+    },
+    "priority_explanation": {
+      "type": "string",
+      "description": "Why this order of intervention is correct"
+    },
+    "excluded_dimensions": {
+      "type": "array",
+      "description": "Dimensions that should not be prioritized now",
+      "items": {
+        "type": "string",
+        "enum": ["mind", "body", "spirit", "vocation"]
+      }
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    }
+  }
+}
