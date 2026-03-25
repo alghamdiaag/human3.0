@@ -1,0 +1,106 @@
+# File: /schemas/execution.schema.json
+
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Human3.0 Execution Plan",
+  "type": "object",
+  "required": [
+    "daily_levers",
+    "weekly_structure",
+    "constraints",
+    "thirty_day_plan",
+    "metrics"
+  ],
+  "properties": {
+    "daily_levers": {
+      "type": "array",
+      "description": "Core daily actions (maximum 3)",
+      "minItems": 1,
+      "maxItems": 3,
+      "items": {
+        "type": "string"
+      }
+    },
+    "weekly_structure": {
+      "type": "object",
+      "required": ["focus", "review"],
+      "properties": {
+        "focus": {
+          "type": "string",
+          "description": "Primary weekly focus"
+        },
+        "review": {
+          "type": "string",
+          "description": "Weekly review structure"
+        }
+      }
+    },
+    "constraints": {
+      "type": "array",
+      "description": "Non-negotiable rules",
+      "items": {
+        "type": "string"
+      }
+    },
+    "thirty_day_plan": {
+      "type": "object",
+      "required": [
+        "objective",
+        "weekly_breakdown",
+        "expected_obstacles",
+        "recovery_actions"
+      ],
+      "properties": {
+        "objective": {
+          "type": "string",
+          "description": "Main goal for the 30-day period"
+        },
+        "weekly_breakdown": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "expected_obstacles": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "recovery_actions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "metrics": {
+      "type": "object",
+      "required": [
+        "execution",
+        "clarity",
+        "energy",
+        "alignment"
+      ],
+      "properties": {
+        "execution": {
+          "type": "string",
+          "description": "How execution will be measured"
+        },
+        "clarity": {
+          "type": "string",
+          "description": "How clarity will be measured"
+        },
+        "energy": {
+          "type": "string",
+          "description": "How energy will be measured"
+        },
+        "alignment": {
+          "type": "string",
+          "description": "How alignment will be measured"
+        }
+      }
+    }
+  }
+}
