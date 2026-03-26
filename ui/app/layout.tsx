@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { TopAppBar } from "@/components/top-app-bar";
+import { BottomNav } from "@/components/bottom-nav";
 
 export const metadata: Metadata = {
-  title: "الانسان 3.0",
+  title: "هيومن 3.0",
   description: "بيئة تفكير منظّمة لاتخاذ القرار بوضوح وعمق.",
 };
 
@@ -13,7 +15,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ar" dir="rtl">
-      <body>{children}</body>
+      <body>
+        <TopAppBar />
+        {children}
+        <BottomNav />
+      </body>
     </html>
   );
 }

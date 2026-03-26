@@ -30,7 +30,7 @@ export function TopAppBar({
           <div className="text-xl font-bold tracking-tight text-teal-400">
             {title}
           </div>
-          <div className="text-[10px] uppercase tracking-[0.18em] text-slate-500">
+          <div className="text-[10px] tracking-[0.18em] text-slate-500">
             {subtitle}
           </div>
         </div>

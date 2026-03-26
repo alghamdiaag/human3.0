@@ -1,12 +1,9 @@
-import { TopAppBar } from "@/components/top-app-bar";
 export default function HomePage() {
   return (
-    <main className="min-h-screen bg-[#111316] text-[#e2e2e6]">
-     <TopAppBar />
-
-      <section className="mx-auto flex w-full max-w-screen-xl flex-col px-6 pb-28 pt-10 md:px-10 lg:px-16">
-        <div className="mb-10 inline-flex w-fit items-center border border-white/10 bg-[#1a1c1f] px-3 py-1 self-start">
-          <span className="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#66d9cc]">
+    <main className="min-h-screen bg-[#111316] px-6 pb-28 pt-10 text-[#e2e2e6] md:px-10 lg:px-16">
+      <section className="mx-auto flex w-full max-w-screen-xl flex-col">
+        <div className="mb-10 inline-flex w-fit items-center self-start border border-white/10 bg-[#1a1c1f] px-3 py-1">
+          <span className="text-[11px] font-semibold tracking-[0.28em] text-[#66d9cc]">
             الملاذ المعرفي
           </span>
         </div>
@@ -29,7 +26,7 @@ export default function HomePage() {
 
           <div className="hidden lg:col-span-4 lg:block">
             <div className="flex flex-col gap-2 text-left">
-              <span className="text-[10px] uppercase tracking-[0.2em] text-[#879390]">
+              <span className="text-[10px] tracking-[0.2em] text-[#879390]">
                 حالة النظام
               </span>
               <div className="h-px w-full bg-white/10" />
@@ -41,10 +38,10 @@ export default function HomePage() {
         </div>
 
         <div className="mt-14 grid gap-6 md:grid-cols-3">
-          <div className="relative min-h-[240px] overflow-hidden bg-[#0c0e11] p-8 md:col-span-2 text-right">
+          <div className="relative min-h-[240px] overflow-hidden bg-[#0c0e11] p-8 text-right md:col-span-2">
             <div className="relative z-10">
               <div className="mb-6 text-2xl text-[#66d9cc]">✦</div>
-              <p className="mb-2 text-xs font-bold uppercase tracking-[0.24em] text-[#879390]">
+              <p className="mb-2 text-xs font-bold tracking-[0.24em] text-[#879390]">
                 مخرجات البروتوكول
               </p>
               <h2 className="text-4xl font-extrabold tracking-tight">
@@ -73,7 +70,7 @@ export default function HomePage() {
           <div className="flex min-h-[240px] flex-col justify-between bg-[#1a1c1f] p-8 text-right">
             <div>
               <div className="mb-6 text-2xl text-[#66d9cc]">◔</div>
-              <p className="mb-2 text-xs font-bold uppercase tracking-[0.24em] text-[#879390]">
+              <p className="mb-2 text-xs font-bold tracking-[0.24em] text-[#879390]">
                 المدة
               </p>
               <p className="text-4xl font-extrabold tracking-tight">
@@ -100,7 +97,7 @@ export default function HomePage() {
 
             <button
               type="button"
-              className="mt-10 inline-flex w-full items-center justify-center gap-4 bg-gradient-to-r from-[#66d9cc] to-[#00796f] px-8 py-5 text-sm font-extrabold uppercase tracking-[0.2em] text-[#003732] transition hover:brightness-110 active:scale-[0.99]"
+              className="mt-10 inline-flex w-full items-center justify-center gap-4 bg-gradient-to-r from-[#66d9cc] to-[#00796f] px-8 py-5 text-sm font-extrabold tracking-[0.2em] text-[#003732] transition hover:brightness-110 active:scale-[0.99]"
             >
               ابدأ البروتوكول
               <span aria-hidden="true">←</span>
@@ -112,7 +109,7 @@ export default function HomePage() {
               <div className="absolute inset-0 bg-[linear-gradient(to_bottom,transparent,rgba(12,14,17,0.9))]" />
               <div className="absolute bottom-6 right-6 flex items-center gap-3">
                 <span className="h-2 w-2 animate-pulse bg-[#66d9cc]" />
-                <span className="text-[10px] font-semibold uppercase tracking-[0.24em] text-[#66d9cc]/80">
+                <span className="text-[10px] font-semibold tracking-[0.24em] text-[#66d9cc]/80">
                   النظام جاهز لبدء الاستكشاف الأولي
                 </span>
               </div>
@@ -120,34 +117,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      <nav className="fixed bottom-0 left-0 right-0 z-50 border-t border-white/5 bg-[#020617]/90 backdrop-blur-lg">
-        <div className="mx-auto flex h-20 w-full max-w-screen-xl items-center justify-around px-8">
-          <button
-            type="button"
-            className="flex flex-col items-center justify-center text-[10px] uppercase tracking-[0.2em] text-slate-500 transition hover:text-slate-300"
-          >
-            <span className="mb-1 text-base">→</span>
-            التالي
-          </button>
-
-          <button
-            type="button"
-            className="flex scale-110 flex-col items-center justify-center rounded-lg bg-gradient-to-br from-[#66d9cc] to-[#00796f] px-6 py-2 text-[10px] font-bold uppercase tracking-[0.2em] text-[#003732] shadow-lg shadow-teal-500/20 transition active:scale-100"
-          >
-            <span className="mb-1 text-base">▶</span>
-            تنفيذ
-          </button>
-
-          <button
-            type="button"
-            className="flex flex-col items-center justify-center text-[10px] uppercase tracking-[0.2em] text-slate-500 transition hover:text-slate-300"
-          >
-            <span className="mb-1 text-base">←</span>
-            السابق
-          </button>
-        </div>
-      </nav>
     </main>
   );
 }
