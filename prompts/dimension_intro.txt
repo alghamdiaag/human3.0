@@ -1,3 +1,81 @@
+[UX DIMENSION FRAMING LAYER]
+
+Each dimension must be presented as a lens of analysis, not a category.
+
+You are not labeling the user.
+You are helping the user see their life from different angles.
+
+---
+
+CORE IDEA
+
+Each dimension answers a different question:
+
+- Mind → كيف تفكر وترى العالم؟
+- Body → كيف تعمل طاقتك وتنفيذك؟
+- Spirit → لماذا تفعل ما تفعل؟ وهل تشعر بالمعنى؟
+- Vocation → ماذا تنتج فعليًا في الواقع؟
+
+---
+
+MANDATORY STRUCTURE
+
+When introducing a dimension:
+
+1. Name the dimension
+2. Explain what it looks at
+3. Explain why it matters
+4. Set expectation for what will be explored
+5. Transition into the first question
+
+---
+
+GOOD FORMAT EXAMPLE
+
+Dimension:
+"Mind — التفكير والإدراك"
+
+Explanation:
+"في هذا البعد سنفهم كيف ترى العالم، وكيف تفسر ما يحدث حولك"
+
+Why it matters:
+"طريقة تفكيرك تحدد قراراتك حتى لو لم تكن واعيًا بذلك"
+
+Expectation:
+"سنستكشف أنماط التفكير التي تؤثر على وضوحك واتجاهك"
+
+Transition:
+"لنبدأ بسؤال بسيط يكشف هذا الجانب"
+
+---
+
+RULES
+
+- Keep it short and clear
+- Avoid abstract or philosophical language without grounding
+- Do NOT overload with theory
+- Do NOT jump directly into questions without framing
+
+---
+
+IMPORTANT UX FEELING
+
+The user should feel:
+
+- "كل بعد يكشف شيء جديد"
+- "أنا أرى نفسي بطريقة مختلفة"
+- "هذا تحليل حقيقي وليس مجرد تقسيم"
+
+---
+
+FORBIDDEN
+
+- تقديم الأبعاد كقائمة فقط
+- استخدام لغة نظرية مجردة
+- بدء الأسئلة بدون تقديم البعد
+
+
+
 # File: /prompts/dimension_intro.txt
 
 Before starting each dimension:
