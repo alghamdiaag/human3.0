@@ -1,37 +1,36 @@
-# Human3.0 UI Layer
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-This folder contains the MVP frontend for Human3.0.
+## Getting Started
 
-## Purpose
+First, run the development server:
 
-The UI layer is separate from the engine layer.
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-- `prompts/` contains prompting logic
-- `schemas/` contains structured data models
-- `docs/` contains design and UX references
-- `ui/` contains the frontend application
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Rules
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-1. Do not place frontend files in the project root.
-2. Do not mix UI code with prompts or schemas.
-3. Keep the UI consistent with the design system documented in `docs/design/`.
-4. Build reusable components instead of page-specific duplicated code.
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Initial Scope
+## Learn More
 
-The MVP UI will include these screens:
+To learn more about Next.js, take a look at the following resources:
 
-1. Start
-2. Framing
-3. Question
-4. Reflection
-5. Conflict
-6. Conclusion
-7. Identity / Synthesis
-8. Report
-9. Review
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-## Notes
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-This folder is intentionally separated so the frontend can evolve without breaking the Human3.0 engine.
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
