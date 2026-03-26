@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { TopAppBar } from "@/components/top-app-bar";
 import { BottomNav } from "@/components/bottom-nav";
+import { TopAppBar } from "@/components/top-app-bar";
 
 export const metadata: Metadata = {
   title: "هيومن 3.0",
