@@ -1,34 +1,8 @@
+import { TopAppBar } from "@/components/top-app-bar";
 export default function HomePage() {
   return (
     <main className="min-h-screen bg-[#111316] text-[#e2e2e6]">
-      <header className="sticky top-0 z-50 border-b border-teal-500/20 bg-[#020617]/80 backdrop-blur-xl">
-        <div className="flex h-16 items-center justify-between px-4 md:px-6">
-          <button
-            type="button"
-            className="rounded-md p-2 text-teal-400 transition hover:bg-white/5"
-            aria-label="القائمة"
-          >
-            <span className="flex flex-col items-center gap-1">
-              <span className="h-1 w-1 rounded-full bg-current" />
-              <span className="h-1 w-1 rounded-full bg-current" />
-              <span className="h-1 w-1 rounded-full bg-current" />
-            </span>
-          </button>
-
-          <div className="text-right">
-            <div className="text-xl font-bold tracking-tight text-teal-400">
-              البروتوكول الخطي
-            </div>
-            <div className="text-[10px] uppercase tracking-[0.18em] text-slate-500">
-              هيومن 3.0 · المرحلة 00
-            </div>
-          </div>
-        </div>
-
-        <div className="h-[2px] w-full bg-[#1e2023]">
-          <div className="h-full w-[8%] bg-gradient-to-r from-[#66d9cc] to-[#00796f]" />
-        </div>
-      </header>
+     <TopAppBar />
 
       <section className="mx-auto flex w-full max-w-screen-xl flex-col px-6 pb-28 pt-10 md:px-10 lg:px-16">
         <div className="mb-10 inline-flex w-fit items-center border border-white/10 bg-[#1a1c1f] px-3 py-1 self-start">
