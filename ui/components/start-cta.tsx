@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export function StartCTA() {
   return (
     <div className="mt-16 grid gap-6 lg:grid-cols-12">
@@ -11,13 +13,13 @@ export function StartCTA() {
           تسمح للنظام ببناء قراءة أوضح لمسار تفكيرك.
         </p>
 
-        <button
-          type="button"
+        <Link
+          href="/framing"
           className="mt-10 inline-flex w-full items-center justify-center gap-4 bg-gradient-to-r from-[#66d9cc] to-[#00796f] px-8 py-5 text-sm font-extrabold tracking-[0.2em] text-[#003732] transition hover:brightness-110 active:scale-[0.99]"
         >
           ابدأ البروتوكول
           <span aria-hidden="true">←</span>
-        </button>
+        </Link>
       </div>
 
       <div className="overflow-hidden bg-[#0c0e11] lg:col-span-7">

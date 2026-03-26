@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export function FramingContent() {
   return (
     <section className="grid gap-12 lg:grid-cols-12">
@@ -140,13 +142,13 @@ export function FramingContent() {
               </div>
             </div>
 
-            <button
-              type="button"
+            <Link
+              href="/question"
               className="inline-flex w-full items-center justify-between bg-gradient-to-r from-[#66d9cc] to-[#00796f] px-8 py-5 text-sm font-extrabold tracking-[0.2em] text-[#003732] transition hover:brightness-110 active:scale-[0.99]"
             >
               المتابعة إلى الاستكشاف الأولي
               <span aria-hidden="true">←</span>
-            </button>
+            </Link>
           </div>
         </div>
 

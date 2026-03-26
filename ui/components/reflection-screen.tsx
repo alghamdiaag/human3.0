@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 
 export function ReflectionScreen() {
@@ -106,6 +107,16 @@ export function ReflectionScreen() {
             </p>
           </div>
         )}
+
+        <Link
+          href="/conflict"
+          className={`inline-flex w-full items-center justify-between bg-gradient-to-r from-[#66d9cc] to-[#00796f] px-6 py-4 text-sm font-bold tracking-[0.2em] text-[#003732] ${
+            !confirmed ? "pointer-events-none opacity-40" : ""
+          }`}
+        >
+          الانتقال إلى الخطوة التالية
+          <span aria-hidden="true">←</span>
+        </Link>
       </div>
 
       <aside className="space-y-6 lg:col-span-4 text-right">
